@@ -30,6 +30,8 @@ gulp.task('scripts', function(){
         'app/libs/flexibility/flexibility.js',
         'app/libs/magnific/jquery.magnific-popup.js',
         'app/libs/slick/slick.min.js',
+        'app/libs/restable/restable.js',
+        'app/libs/telinput/intlTelInput.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

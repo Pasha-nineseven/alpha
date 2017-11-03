@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="15" viewBox="0 0 41 15">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#07162b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_1" data-name="1" class="cls-1">
+    <image id="right-arrow_5_" data-name="right-arrow (5)" x="33" width="8" height="15" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAPCAQAAABzA0a4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhCh8NBwL6kVlXAAAAmklEQVQI113PMQ6CMBSA4b/AYTzGSxx0aVyMiyfwFNidAziYSDRGXWHHdIPEjcQVY9w5Ag4tQuz2f8N7r6rL2JuM3ws4cov1AKF6youDVLbxINha3px7CgUcXaS0jQewtbSkUtiPB7APaUnlrrbDAuIrk2iUG+bMolEmTE0V+FyToE0Jgc8d2hTudJcLl6C6JSdWJu9nqf/ffgGjbDilsBZMowAAAABJRU5ErkJggg=="/>
+    <rect class="cls-2" y="7" width="41" height="1"/>
+  </g>
+</svg>

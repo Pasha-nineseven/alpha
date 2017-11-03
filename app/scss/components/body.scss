@@ -38,6 +38,11 @@ textarea,input {
 
 a{
 	transition: color 0.3s linear;
+	color: #d31f34;
+	text-decoration: none;
+	&:hover{
+		background: #efefef; 
+	}
 }
 
 body {
