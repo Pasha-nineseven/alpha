@@ -1,22 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="15" viewBox="0 0 41 15">
-  <defs>
-    <style>
-      .cls-1 {
-        filter: url(#filter);
-      }
-
-      .cls-2 {
-        fill: #fff;
-      }
-    </style>
-    <filter id="filter" filterUnits="userSpaceOnUse">
-      <feFlood result="flood" flood-color="#07162b"/>
-      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
-      <feBlend result="blend" in2="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="_1" data-name="1" class="cls-1">
-    <image id="right-arrow_5_" data-name="right-arrow (5)" x="33" width="8" height="15" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAPCAQAAABzA0a4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhCh8NBwL6kVlXAAAAmklEQVQI113PMQ6CMBSA4b/AYTzGSxx0aVyMiyfwFNidAziYSDRGXWHHdIPEjcQVY9w5Ag4tQuz2f8N7r6rL2JuM3ws4cov1AKF6youDVLbxINha3px7CgUcXaS0jQewtbSkUtiPB7APaUnlrrbDAuIrk2iUG+bMolEmTE0V+FyToE0Jgc8d2hTudJcLl6C6JSdWJu9nqf/ffgGjbDilsBZMowAAAABJRU5ErkJggg=="/>
-    <rect class="cls-2" y="7" width="41" height="1"/>
-  </g>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 489.2 489.2" style="enable-background:new 0 0 489.2 489.2;" xml:space="preserve">
+	<g>
+		<path d="M477.444,98l-94.5-94.4c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l73.6,73.6h-418.8c-6.8,0-12.3,5.5-12.3,12.3
+			s5.5,12.3,12.3,12.3h418.8l-73.6,73.4c-4.8,4.8-4.8,12.5,0,17.3c2.4,2.4,5.5,3.6,8.7,3.6s6.3-1.2,8.7-3.6l94.5-94.5
+			C482.244,110.6,482.244,102.8,477.444,98z"/>
+	</g>
 </svg>
