@@ -353,6 +353,7 @@
                 // we cannot just stopPropagation as it may be needed to close another instance
                 if (that.countryList.hasClass("hide") && !that.telInput.prop("disabled") && !that.telInput.prop("readonly")) {
                     that._showDropdown();
+                    $('.flag-container').addClass('active');
                 }
             });
             // open dropdown list if currently focused
@@ -786,6 +787,7 @@
         // close the dropdown and unbind any listeners
         _closeDropdown: function() {
             this.countryList.addClass("hide");
+            $('.flag-container').removeClass('active');
             // update the arrow
             this.selectedFlagInner.children(".iti-arrow").removeClass("up");
             // unbind key events

@@ -103,6 +103,16 @@ $(document).ready(function() {
 		$(activeTab).fadeIn();
 		return false;
 	});
+
+	//TOP-SEARCH
+	$('body').on('click','.search-wrap', function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+	});
+
+	
+
+	
 });
 
 
@@ -112,12 +122,16 @@ $(window).resize(function () {
 	position_indicator(menu.find(".lang-item.active")); 
 });
 
-// $(window).load(function(){
 
+
+window.onload = function() {
+   pageLoad();
+}
+// $(window).load(function(){
+	
 // });
 
 // functions
-
 function position_indicator(ele){
 	var left = ele.offset().left;
 	var width = ele.innerWidth();
@@ -126,6 +140,15 @@ function position_indicator(ele){
 		width: width
 	});
 }
+
+function pageLoad(){
+	if ($('.layout--index').length>0) {
+		setTimeout(function(){
+			$('body').addClass('loaded');
+		}, 2000);
+	}
+}
+
 
 // links pages
 $('body').append(
@@ -141,5 +164,6 @@ $('body').append(
 		<li><a href="index.html">Index</a></li> \
 		<li><a href="stock.html">Акция</a></li> \
 		<li><a href="service.html">Услуга</a></li> \
+		<li><a href="test.html">Test</a></li> \
 	</ol> \
 </div>');
