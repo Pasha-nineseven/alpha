@@ -112,7 +112,12 @@ $(document).ready(function() {
 
 	
 
-	
+	//MOBILE FOOTER TOGGLE
+	$('body').on('click','.page-footer__toggle', function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$(this).next('.page-footer__nav').slideToggle();
+	});
 });
 
 
@@ -164,6 +169,7 @@ $('body').append(
 		<li><a href="index.html">Index</a></li> \
 		<li><a href="stock.html">Акция</a></li> \
 		<li><a href="service.html">Услуга</a></li> \
+		<li><a href="cost.html">Стоимость</a></li> \
 		<li><a href="test.html">Test</a></li> \
 	</ol> \
 </div>');

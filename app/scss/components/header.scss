@@ -555,11 +555,11 @@
 		.search-inner {
 			.search-icon{
 				height: 0;
-				top: 10px;
+				top: 11px;
 				border: 1px solid #d31f34;
 				border-radius: 0;
 				transform-origin: 50% 50%;
-				transition: border .5s .4s, height .5s ease-in, top .5s ease-in, border-radius .5s .4s;
+				transition: border .5s .4s, height .5s ease-in, top .5s ease-in, border-radius .5s .4s, opacity 0.3s ease;
 			}
 			&:before {
 				transform: rotate(90deg);
@@ -570,6 +570,11 @@
 				transition: transform .3s .5s ease-in, height 0s .5s;
 			}
 		}
+		// &:hover{
+		// 	.search-icon{
+		// 		opacity: 0;
+		// 	}
+		// }
 	}
 	&:hover{
 		background: transparent!important;
