@@ -32,6 +32,10 @@ gulp.task('scripts', function(){
         'app/libs/slick/slick.min.js',
         'app/libs/restable/restable.js',
         'app/libs/telinput/intlTelInput.js',
+        'app/libs/range-slider/ui.js',
+        'app/libs/range-slider/jquery-ui-slider-pips.js',
+        'app/libs/ui-touch/jquery.ui.touch-punch.min.js',
+        'app/libs/formstyler/jquery.formstyler.min.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

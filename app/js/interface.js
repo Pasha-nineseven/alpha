@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	flexibility(document.documentElement);
-
+	document.body.classList.remove('no-js');
 
 	//LOGO-LINK
 	$('body').on('click','.menu-btn', function(e){
@@ -21,19 +21,19 @@ $(document).ready(function() {
 	});
 
 	//SUBMENU
-	$("body").on("click", ".page-header__link--sub>a", function(e){
-		e.preventDefault();
-		$(this).toggleClass('active');
-		$(this).next('.page-header__submenu').toggleClass('active');
-	});
-	$(document).mouseup(function (e){
-		var div = $(".page-header__link--sub");
-		if (!div.is(e.target)
-		    && div.has(e.target).length === 0) {
-			$(".page-header__link--sub>a").removeClass('active');
-			$(".page-header__submenu").removeClass('active');
-		}
-	});
+	// $("body").on("click", ".page-header__link--sub>a", function(e){
+	// 	e.preventDefault();
+	// 	$(this).toggleClass('active');
+	// 	$(this).next('.page-header__submenu').toggleClass('active');
+	// });
+	// $(document).mouseup(function (e){
+	// 	var div = $(".page-header__link--sub");
+	// 	if (!div.is(e.target)
+	// 	    && div.has(e.target).length === 0) {
+	// 		$(".page-header__link--sub>a").removeClass('active');
+	// 		$(".page-header__submenu").removeClass('active');
+	// 	}
+	// });
 
 
 	//LANGUAGE-SELECT
@@ -63,19 +63,19 @@ $(document).ready(function() {
 
 
 
-	$('input,textarea').each(function() {
+	$('.consultation__form').find('input,textarea').each(function() {
 
 		$(this).on('focus', function() {
-			$(this).parents('.input-wrap').addClass('active');
+			$(this).parents('.input-wrap').addClass('act');
 		});
 
 		$(this).on('blur', function() {
 			if ($(this).val().length == 0) {
-				$(this).parents('.input-wrap').removeClass('active');
+				$(this).parents('.input-wrap').removeClass('act');
 			}
 		});
 
-		if ($(this).val() != '') $(this).parents('.input-wrap').addClass('active');
+		if ($(this).val() != '') $(this).parents('.input-wrap').addClass('act');
 	});
 
 
@@ -108,6 +108,16 @@ $(document).ready(function() {
 	$('body').on('click','.search-wrap', function(e){
 		e.preventDefault();
 		$(this).toggleClass('active');
+		$(this).parents('.top-search').toggleClass('active');
+		$('.top-search__bg').fadeToggle();
+	});
+	$('body').on('click','.top-search__bg', function(e){
+		e.preventDefault();
+		$(this).fadeOut();
+		$('.top-menu').fadeOut();
+		$('.search-wrap').removeClass('active');
+		$('.top-search').removeClass('active');
+		//$('body').removeClass('hidden');
 	});
 
 	
@@ -118,6 +128,98 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		$(this).next('.page-footer__nav').slideToggle();
 	});
+
+
+	// $('body').on('click','.input-wrap__toggle', function(e){
+	// 	e.preventDefault();
+	// 	var firstEl = $(this).prev('.input-wrap');
+	// 	var secondEl = $(this).next('.input-wrap');
+	// 	firstEl.insertAfter($(this));
+	// 	secondEl.insertBefore($(this));
+	// });
+
+
+	if ($( ".adwert-sum-slider" ).length>0) {
+		$( ".adwert-sum-slider" ).slider({
+	    	animate: true,
+	        range: "min",
+	        value: 500,
+	        min: 0,
+	        max: 1000,
+	        step: 100,  
+	        slide: function( event, ui ) {
+	            $( "#slider-weight" ).val( ui.value );
+	            // $(this).prev('.input-label').fadeOut(50);
+	        },
+		});
+	};
+
+	//FS
+	if ($('.fs').length) {
+		setTimeout(function() {
+		  $('.fs').styler();
+		}, 5)
+	}
+
+
+
+	//ID REMOVE
+	$('body').on('click','.id-delete', function(e){
+		e.preventDefault();
+		$(this).parents('tr').remove();
+	});
+
+
+
+
+  //INDEX
+  var curPage = 1;
+  var numOfPages = $(".skw-page").length;
+  var animTime = 1000;
+  var scrolling = false;
+  var pgPrefix = ".skw-page-";
+
+  function pagination() {
+    scrolling = true;
+
+    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+    $(pgPrefix + (curPage - 1)).addClass("inactive");
+    $(pgPrefix + (curPage + 1)).removeClass("active");
+
+    setTimeout(function() {
+      scrolling = false;
+    }, animTime);
+  };
+
+  function navigateUp() {
+    if (curPage === 1) return;
+    curPage--;
+    pagination();
+  };
+
+  function navigateDown() {
+    if (curPage === numOfPages) return;
+    curPage++;
+    pagination();
+  };
+
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (scrolling) return;
+    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else { 
+      navigateDown();
+    }
+  });
+
+  $(document).on("keydown", function(e) {
+    if (scrolling) return;
+    if (e.which === 38) {
+      navigateUp();
+    } else if (e.which === 40) {
+      navigateDown();
+    }
+  });
 });
 
 
@@ -166,10 +268,13 @@ $('body').append(
 	</style> \
 	<ol id="pages"> \
 		<li><a href="news.html">Новости</a></li> \
-		<li><a href="index.html">Index</a></li> \
+		<li><a href="about.html">About</a></li> \
 		<li><a href="stock.html">Акция</a></li> \
 		<li><a href="service.html">Услуга</a></li> \
 		<li><a href="cost.html">Стоимость</a></li> \
+		<li><a href="cost-result.html">Стоимость(рез)</a></li> \
+		<li><a href="track.html">Отслеживание</a></li> \
+		<li><a href="index.html">Главная</a></li> \
 		<li><a href="test.html">Test</a></li> \
 	</ol> \
 </div>');

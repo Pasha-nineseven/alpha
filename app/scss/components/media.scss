@@ -35,6 +35,10 @@
 	    padding-left: 50px;
 	    padding-right: 50px;
 	}
+	.top-search__overlay .container-fluid{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 }
 
 @media screen and (max-width: 1300px){
@@ -88,6 +92,9 @@
 	}
 	.service-number {
 	    left: -5px;
+	}
+	.cost-form .input-wrap {
+	    font-size: 14px;
 	}
 }
 
@@ -147,6 +154,15 @@
 	}
 	.service-insert__in {
 	    margin: 0 100px 40px;
+	}
+	.cost__item {
+	    width: 100%;
+	    margin-right: 0;
+	    padding-right: 0;
+	}
+	.top-search__overlay .container-fluid{
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
@@ -482,5 +498,63 @@
 	}
 	.service-range__inner {
 	    padding: 85px 20px 20px 20px;
+	}
+	.cost-form {
+	    padding-right: 0;
+	}
+	.cost-form__item--dest .input-wrap {
+	    width: 100%;
+	    padding-right: 0;
+	    display: block;
+	    margin-right: 0;
+	}
+	.cost__wrap {
+	    overflow: visible;
+	}
+	.cost-form .input-wrap {
+	    width: 100%;
+	    padding-right: 0;
+	    display: block;
+	    margin-right: 0;
+	    margin-bottom: 20px;
+	    border-right: 0;
+	}
+	.cost-form__item {
+	    margin-right: 0;
+	    margin-bottom: 20px;
+	}
+	.cost-form__item--dest {
+	    background: transparent;
+	}
+	.cost-form__item--dest .input-wrap:last-child {
+	    padding-left: 0;
+	    margin-bottom: 0;
+	        margin-top: 35px;
+	}
+	.cost-form__item--dest .input-wrap:last-child .input-label {
+	    left: 15px;
+	}
+	.input-wrap__toggle{
+		border: 0;
+		z-index: 1;
+	}
+	.top-search__input {
+	    font-size: 18px;
+	}
+	.cost-form__search input[type="text"] {
+	    padding-right: 15px;
+	    margin-bottom: 10px;
+	}
+	.cost-form__search-submit {
+	    position: static;
+	    width: 100%;
+	    text-align: center;
+	}
+	.cost-form__sum {
+	    float: none;
+	    margin-bottom: 10px;
+	}
+	.cost-form__refresh {
+	    float: none;
 	}
 }
