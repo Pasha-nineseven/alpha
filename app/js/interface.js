@@ -174,10 +174,10 @@ $(document).ready(function() {
 
   //INDEX
   var curPage = 1;
-  var numOfPages = $(".skw-page").length;
+  var numOfPages = $(".index-page").length;
   var animTime = 1000;
   var scrolling = false;
-  var pgPrefix = ".skw-page-";
+  var pgPrefix = ".index-page-";
 
   function pagination() {
     scrolling = true;
@@ -274,7 +274,7 @@ $('body').append(
 		<li><a href="cost.html">Стоимость</a></li> \
 		<li><a href="cost-result.html">Стоимость(рез)</a></li> \
 		<li><a href="track.html">Отслеживание</a></li> \
-		<li><a href="index.html">Главная</a></li> \
+		<li><a href="index-test.html">Главная2</a></li> \
 		<li><a href="test.html">Test</a></li> \
 	</ol> \
 </div>');
