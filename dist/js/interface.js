@@ -168,7 +168,59 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).parents('tr').remove();
 	});
-});
+
+
+
+
+  	//INDEX
+  	  var curPage = 1;
+	  var numOfPages = $(".skw-page").length;
+	  var animTime = 1000;
+	  var scrolling = false;
+	  var pgPrefix = ".skw-page-";
+
+	  function pagination() {
+	    scrolling = true;
+
+	    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+	    $(pgPrefix + (curPage - 1)).addClass("inactive");
+	    $(pgPrefix + (curPage + 1)).removeClass("active");
+
+	    setTimeout(function() {
+	      scrolling = false;
+	    }, animTime);
+	  };
+
+	  function navigateUp() {
+	    if (curPage === 1) return;
+	    curPage--;
+	    pagination();
+	  };
+
+	  function navigateDown() {
+	    if (curPage === numOfPages) return;
+	    curPage++;
+	    pagination();
+	  };
+
+	  $(document).on("mousewheel DOMMouseScroll", function(e) {
+	    if (scrolling) return;
+	    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+	      navigateUp();
+	    } else { 
+	      navigateDown();
+	    }
+	  });
+
+	  $(document).on("keydown", function(e) {
+	    if (scrolling) return;
+	    if (e.which === 38) {
+	      navigateUp();
+	    } else if (e.which === 40) {
+	      navigateDown();
+	    }
+	  });
+	});
 
 
 
@@ -216,12 +268,13 @@ $('body').append(
 	</style> \
 	<ol id="pages"> \
 		<li><a href="news.html">Новости</a></li> \
-		<li><a href="index.html">Index</a></li> \
+		<li><a href="about.html">About</a></li> \
 		<li><a href="stock.html">Акция</a></li> \
 		<li><a href="service.html">Услуга</a></li> \
 		<li><a href="cost.html">Стоимость</a></li> \
 		<li><a href="cost-result.html">Стоимость(рез)</a></li> \
 		<li><a href="track.html">Отслеживание</a></li> \
+		<li><a href="index.html">Главная2</a></li> \
 		<li><a href="test.html">Test</a></li> \
 	</ol> \
 </div>');

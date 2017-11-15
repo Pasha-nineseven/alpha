@@ -25,7 +25,6 @@
   left: 0;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
-
 }
 
 .index-page__half--info {
@@ -45,123 +44,58 @@
   top: 0;
   width: 100%;
   height: 100%;
-  // -webkit-transform: skewX(-18deg);
-  // -ms-transform: skewX(-18deg);
-  // transform: skewX(-18deg);
-  background: #242323;
+  background: #1b1a1a;
 }
 
-// .index-page__half--img .index-page__inner { left: -40%; }
-
-// .index-page__half--info .index-page__inner { right: -40%; }
 
 .index-page__content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
   position: absolute;
+  overflow: hidden;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  // padding: 0 30%;
   color: #fff;
-  // -webkit-transform: skewX(18deg);
-  // -ms-transform: skewX(18deg);
-  // transform: skewX(18deg);
   -webkit-transition: -webkit-transform 1s, opacity 1s;
   transition: transform 1s, opacity 1s;
-  background-size: cover;
   z-index: 3;
+  will-change: transform;
 }
 
 .index-page__half--img .index-page__content {
-  // padding-left: 30%;
-  // padding-right: 30%;
   -webkit-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
   padding: 0 120px; 
-  position: relative;
-  &:before{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 100%);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-.section-title{
-  position: relative;
-  z-index: 3;
-}
-
 
 .index-page__half--info .index-page__content {
-  // padding-left: 30%;
-  // padding-right: 30%;
   -webkit-transform-origin: 0 100%;
   -ms-transform-origin: 0 100%;
   transform-origin: 0 100%;
+  background: #242323;
+  padding-left: 130px;  
 }
 
 .index-page.inactive .index-page__content {
   opacity: 0.5;
-  // -webkit-transform: scale(0.95);
-  // -ms-transform: scale(0.95);
-  // transform: scale(0.95);
+  transform: scale(0.95);
 }
 
-.index-page__heading {
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  font-size: 25px;
-  text-align: center;
+.index-page__half--info .index-page__content {
+  
 }
 
-.index-page__description {
-  font-size: 18px;
-  text-align: center;
-}
 
-.index-page__link { color: #FFA0A0; }
 
-// .index-page-1 .index-page__half--img .index-page__content { background-image: url("https://unsplash.it/1200/800?image=823"); }
 
-// .index-page-1 .index-page__half--info .index-page__content { background: #242323; }
 
-// .index-page-2 .index-page__half--img .index-page__content { background: #242323; }
 
-// .index-page-2 .index-page__half--info .index-page__content { background-image: url("https://unsplash.it/1200/800?image=723"); }
-
-// .index-page-3 .index-page__half--img .index-page__content { background-image: url("https://unsplash.it/1200/800?image=623"); }
-
-// .index-page-3 .index-page__half--info .index-page__content { background: #242323; }
-
-// .index-page-4 .index-page__half--img .index-page__content { background: #242323; }
-
-// .index-page-4 .index-page__half--info .index-page__content { background-image: url("https://unsplash.it/1200/800?image=523"); }
-
-// .index-page-5 .index-page__half--img .index-page__content { background-image: url("https://unsplash.it/1200/800?image=423"); }
-
-// .index-page-5 .index-page__half--info .index-page__content { background: #242323; }
 
 
 
@@ -171,6 +105,9 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  .index-page__content{
+    justify-content: center;
+  }
   &:before{
     content: "";
     display: block;
@@ -201,4 +138,16 @@
   h2{
     font-size: 48px;
   }
+}
+
+
+.index-page__bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
