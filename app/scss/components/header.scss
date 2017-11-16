@@ -417,13 +417,14 @@
 	padding: 30px 12px;
 	color: #000;
 	transition:all 0.3s ease;
-
+	border-bottom: 2px solid transparent;
 	&:hover{
 		background: #f8f8f8; 
 	}
 	&.active{
 		font-family: 'gilroyextrabold';
 		background: #f8f8f8;
+		border-bottom: 2px solid #d31f34;
 	}
 }
 .lang-txt{

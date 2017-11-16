@@ -25,10 +25,10 @@
             transform: initial;
             will-change: initial;
     }
-    .page-header{
-        // height: auto;
-        position: fixed;
-    }
+    // .page-header{
+    //     // height: auto;
+    //     position: fixed;
+    // }
 }
 
 
@@ -61,7 +61,7 @@
 
 /* Loaded */
 .loaded #loader-wrapper .loader-section {
-        width: 192px;
+    width: 192px;
     height: 154px;
 }
 
@@ -74,8 +74,18 @@
     // -webkit-transition: all 0.3s 1s ease-out;  
     //         transition: all 0.3s 1s ease-out;
 }
-    
-/* JavaScript Turned Off */
-.no-js #loader-wrapper {
-    display: none;
+   
+
+.loader-section{
+    will-change: transform;
+    .top-logo__img {
+        bottom: auto;
+        top: 50%;
+        //margin-top: 20px;
+    }
 }
+
+/* JavaScript Turned Off */
+// .no-js #loader-wrapper {
+//     display: none;
+// }

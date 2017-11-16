@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	flexibility(document.documentElement);
-	document.body.classList.remove('no-js');
+	// document.body.classList.remove('no-js');
 
 	//LOGO-LINK
 	$('body').on('click','.menu-btn', function(e){
@@ -173,13 +173,16 @@ $(document).ready(function() {
 
 
   	//INDEX
-  	  var curPage = 1;
-	  var numOfPages = $(".skw-page").length;
-	  var animTime = 1000;
-	  var scrolling = false;
-	  var pgPrefix = ".skw-page-";
+  	// if (true) {
+  		
+  	// }
+  	var curPage = 1;
+	var numOfPages = $(".index-page").length;
+	var animTime = 1000;
+	var scrolling = false;
+	var pgPrefix = ".index-page-";
 
-	  function pagination() {
+	function pagination() {
 	    scrolling = true;
 
 	    $(pgPrefix + curPage).removeClass("inactive").addClass("active");
@@ -189,21 +192,21 @@ $(document).ready(function() {
 	    setTimeout(function() {
 	      scrolling = false;
 	    }, animTime);
-	  };
+	};
 
-	  function navigateUp() {
+	function navigateUp() {
 	    if (curPage === 1) return;
 	    curPage--;
 	    pagination();
-	  };
+	};
 
-	  function navigateDown() {
+	function navigateDown() {
 	    if (curPage === numOfPages) return;
 	    curPage++;
 	    pagination();
-	  };
+	};
 
-	  $(document).on("mousewheel DOMMouseScroll", function(e) {
+	$(document).on("mousewheel DOMMouseScroll", function(e) {
 	    if (scrolling) return;
 	    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
 	      navigateUp();
@@ -219,8 +222,8 @@ $(document).ready(function() {
 	    } else if (e.which === 40) {
 	      navigateDown();
 	    }
-	  });
 	});
+});
 
 
 
@@ -229,7 +232,9 @@ $(window).resize(function () {
 	position_indicator(menu.find(".lang-item.active")); 
 });
 
-
+// document.addEventListener("DOMContentLoaded", function(event) {
+//     console.log("DOM fully loaded and parsed");
+// });
 
 window.onload = function() {
    pageLoad();
@@ -275,6 +280,5 @@ $('body').append(
 		<li><a href="cost-result.html">Стоимость(рез)</a></li> \
 		<li><a href="track.html">Отслеживание</a></li> \
 		<li><a href="index.html">Главная2</a></li> \
-		<li><a href="test.html">Test</a></li> \
 	</ol> \
 </div>');
