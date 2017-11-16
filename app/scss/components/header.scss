@@ -40,12 +40,12 @@
 	float: right;
 	position: relative;
 	padding-right: 55px;
-	margin-left: 25px;
+	margin-left: 9px;
 	&:after{
 		content: '';
 		display: inline-block;
 		height: 1px;
-		background: #e8e8e8;
+		background: rgba(232,232,232, 0.2);
 		width: 55px;
 		position: absolute;
 		top: 50%;
@@ -67,7 +67,7 @@
 		content: '';
 		display: inline-block;
 		height: 1px;
-		background: #e8e8e8;
+		background: rgba(232,232,232, 0.2);
 		width: 20px;
 		position: absolute;
 		top: 50%;
@@ -89,7 +89,7 @@
 	overflow: hidden;
 	// margin-top: -25px;
 	padding-top: 16px;
-	border-bottom: 1px solid #e8e8e8;
+	border-bottom: 1px solid rgba(232,232,232, 0.2);
 }
 
 .top-logo{
