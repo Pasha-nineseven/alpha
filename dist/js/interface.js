@@ -9,8 +9,8 @@ $(document).ready(function() {
 		$('.top-menu').fadeToggle();
 		$('body').toggleClass('hidden');
 		$('.top-menu__bg').fadeToggle();
-		position_indicator(menu.find(".lang-item.active"));  
-		setTimeout(function(){indicator.css("opacity", 1);}, 0);
+		//position_indicator(menu.find(".lang-item.active"));  
+		//setTimeout(function(){indicator.css("opacity", 1);}, 0);
 	});
 	$('body').on('click','.top-menu__bg', function(e){
 		e.preventDefault();
@@ -48,7 +48,7 @@ $(document).ready(function() {
 			e.preventDefault();
 			$('.lang-item').removeClass('active');
 			$(this).addClass('active');
-			position_indicator(menu.find(".lang-item.active"));
+			//position_indicator(menu.find(".lang-item.active"));
 		})
 	}
 
@@ -223,13 +223,65 @@ $(document).ready(function() {
 	      navigateDown();
 	    }
 	});
+
+
+
+	//SQUARES HOVER
+	if ($('.squares').length>0) {
+	    var bArray = [];
+	    // Define a size array, this will be used to vary bubble sizes
+	    var sArray = [4,6,8,10];
+	 
+	    // Push the header width values to bArray
+	    for (var i = 0; i < $('.squares').width(); i++) {
+	        bArray.push(i);
+	    }
+	     
+	    // Function to select random array element
+	    // Used within the setInterval a few times
+	    function randomValue(arr) {
+	        return arr[Math.floor(Math.random() * arr.length)];
+	    }
+	 
+	    // setInterval function used to create new bubble every 350 milliseconds
+	    setInterval(function(){
+	         
+	        // Get a random size, defined as variable so it can be used for both width and height
+	        var size = randomValue(sArray);
+	        // New bubble appeneded to div with it's size and left position being set inline
+	        // Left value is set through getting a random value from bArray
+	        $('.squares').append('<div class="i-square" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+	         
+	        // Animate each bubble to the top (bottom 100%) and reduce opacity as it moves
+	        // Callback function used to remove finsihed animations from the page
+	        $('.i-square').animate({
+	            'bottom': '100%',
+	            'opacity' : '-=0.7'
+	        }, 3000, function(){
+	            $(this).remove()
+	        }
+	        );
+	 
+	 
+	    }, 350);
+    }
+
+
+
+
+
+	//MAP
+	if ($('#map').length>0) {
+		init()
+	}
+	
 });
 
 
 
 
 $(window).resize(function () {
-	position_indicator(menu.find(".lang-item.active")); 
+	//position_indicator(menu.find(".lang-item.active")); 
 });
 
 // document.addEventListener("DOMContentLoaded", function(event) {
@@ -262,6 +314,308 @@ function pageLoad(){
 }
 
 
+function init(){
+
+	var icon = "img/content/icon.png";
+	var icon_h = "img/content/icon-h.png";
+	var latlngBelarus = new google.maps.LatLng(53.9077113,27.482882);
+
+    var markers = [
+	    {
+	        "lat": '53.9077113',
+	        "lng": '27.482882',
+	    },
+	    {
+	        "lat": '38.82259098',
+	        "lng": '-101.07421875',
+	    },
+    ];
+    var map = new google.maps.Map(document.getElementById('map'), {
+	    center: latlngBelarus,
+        zoom: 10,
+        mapTypeControl: false,
+        navigationControl: false,
+        scrollwheel: false,
+        streetViewControl: false,
+        zoomControl: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.LEFT_BOTTOM
+        },
+        styles: [
+		    {
+		        "featureType": "all",
+		        "elementType": "labels.text.fill",
+		        "stylers": [
+		            {
+		                "saturation": 36
+		            },
+		            {
+		                "color": "#333333"
+		            },
+		            {
+		                "lightness": 40
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "all",
+		        "elementType": "labels.text.stroke",
+		        "stylers": [
+		            {
+		                "visibility": "on"
+		            },
+		            {
+		                "color": "#ffffff"
+		            },
+		            {
+		                "lightness": 16
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "all",
+		        "elementType": "labels.icon",
+		        "stylers": [
+		            {
+		                "visibility": "off"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "administrative",
+		        "elementType": "geometry.fill",
+		        "stylers": [
+		            {
+		                "color": "#ffffff"
+		            },
+		            {
+		                "lightness": 20
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "administrative",
+		        "elementType": "geometry.stroke",
+		        "stylers": [
+		            {
+		                "color": "#fefefe"
+		            },
+		            {
+		                "lightness": 17
+		            },
+		            {
+		                "weight": 1.2
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "landscape",
+		        "elementType": "geometry",
+		        "stylers": [
+		            {
+		                "color": "#f5f5f5"
+		            },
+		            {
+		                "lightness": 20
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "landscape.man_made",
+		        "elementType": "geometry",
+		        "stylers": [
+		            {
+		                "color": "#e6e6e6"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "poi",
+		        "elementType": "geometry",
+		        "stylers": [
+		            {
+		                "color": "#f5f5f5"
+		            },
+		            {
+		                "lightness": 21
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "poi.park",
+		        "elementType": "geometry",
+		        "stylers": [
+		            {
+		                "color": "#dadada"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "road.highway",
+		        "elementType": "geometry.fill",
+		        "stylers": [
+		            {
+		                "color": "#acacac"
+		            },
+		            {
+		                "lightness": 17
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "road.highway",
+		        "elementType": "geometry.stroke",
+		        "stylers": [
+		            {
+		                "lightness": 29
+		            },
+		            {
+		                "weight": 0.2
+		            },
+		            {
+		                "color": "#ffffff"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "road.arterial",
+		        "elementType": "geometry",
+		        "stylers": [
+		            {
+		                "color": "#bcbcbc"
+		            },
+		            {
+		                "lightness": 18
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "road.arterial",
+		        "elementType": "geometry.stroke",
+		        "stylers": [
+		            {
+		                "color": "#f3f3f3"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "road.local",
+		        "elementType": "geometry",
+		        "stylers": [
+		            {
+		                "color": "#ffffff"
+		            },
+		            {
+		                "lightness": 16
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "road.local",
+		        "elementType": "geometry.stroke",
+		        "stylers": [
+		            {
+		                "color": "#d7d7d7"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "transit.line",
+		        "elementType": "geometry.fill",
+		        "stylers": [
+		            {
+		                "color": "#ffffff"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "transit.station.airport",
+		        "elementType": "labels.icon",
+		        "stylers": [
+		            {
+		                "color": "#000000"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "transit.station.bus",
+		        "elementType": "labels.icon",
+		        "stylers": [
+		            {
+		                "color": "#ff0000"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "transit.station.rail",
+		        "elementType": "labels.icon",
+		        "stylers": [
+		            {
+		                "color": "#000000"
+		            }
+		        ]
+		    },
+		    {
+		        "featureType": "water",
+		        "elementType": "geometry",
+		        "stylers": [
+		            {
+		                "color": "#989898"
+		            },
+		            {
+		                "lightness": 17
+		            }
+		        ]
+		    }
+		],
+    });
+
+
+    var marker, i;
+
+    for (i = 0; i < markers.length; i++) {
+    	var data = markers[i];
+    	var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+
+	    marker = new google.maps.Marker({
+	        position: myLatlng,
+	        map: map,
+	        icon: icon,
+	    });
+
+
+	    //HOVER
+	    google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+	        return function() {
+	         	for (var i = 0; i < markers.length; i++) {
+					//markers[i].setIcon(markersIcon[i]);
+					marker.setIcon(icon_h);
+				};
+	        }
+	    })(marker, i));
+
+	    google.maps.event.addListener(marker, 'mouseout', (function(marker, i) {
+	        return function() {
+	         	for (var i = 0; i < markers.length; i++) {
+					//markers[i].setIcon(markersIcon[i]);
+					marker.setIcon(icon);
+				};
+	        }
+	    })(marker, i));
+
+    }
+
+
+    //resize map
+    google.maps.event.addDomListener(window, "resize", function() {
+        var center = map.getCenter();
+        google.maps.event.trigger(map, "resize");
+        map.setCenter(center);
+    });
+}
+
+
+
 // links pages
 $('body').append(
 	'<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 200px;"> \
@@ -279,6 +633,6 @@ $('body').append(
 		<li><a href="cost.html">Стоимость</a></li> \
 		<li><a href="cost-result.html">Стоимость(рез)</a></li> \
 		<li><a href="track.html">Отслеживание</a></li> \
-		<li><a href="index.html">Главная2</a></li> \
+		<li><a href="index.html">Главная</a></li> \
 	</ol> \
 </div>');

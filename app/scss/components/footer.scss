@@ -80,6 +80,15 @@
 	}
 }
 
+@keyframes shine {
+	0%{
+		left: -75%;
+	}
+	100% {
+		left: 125%;
+	}
+}
+
 .page-footer__nav{
 	padding: 0 10px;
 	display: flex;

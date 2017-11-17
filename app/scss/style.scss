@@ -1401,9 +1401,9 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	display: inline-block;
     background: transparent;
     border: 2px solid #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'gilroyextrabold';
-    padding: 13px 26px;
+    padding: 13px;
     background: #d31f34;
     color: #fff;
 }
@@ -1715,19 +1715,145 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 
 
-.squares{
+.squares-wrap{
 	position: relative;
 	overflow: hidden;
-}
-.i-square{
-	position: absolute;
-	width: 7px;
-	height: 7px;
-	//bottom: 10px;
-	background: #fff;
-	//z-index: -1;
+	// &:hover{
+	// 	.squares{
+	// 		opacity: 1;
+	// 	}
+	// }
+	&:before{
+		content: attr(data-visual-label);
+	    display: inline-block;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    transform: translateY(-150%);
+	    transition: all 0.3s ease;
+	    width: 100%;
+	    text-align: center;
+	}
+	svg{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&:hover{
+		.sq0{
+			opacity: 0;
+		}
+		.sq1{
+			opacity: 0.1;
+		}
+		.sq2{
+			opacity: 0.2;
+		}
+		.sq3{
+			opacity: 0.3;
+		}
+		.sq4{
+			opacity: 0.4;
+		}
+		.sq5{
+			opacity: 0.5;
+		}
+		.sq6{
+			opacity: 0.6;
+		}
+		.sq7{
+			opacity: 0.7;
+		}
+		.sq8{
+			opacity: 0.8;
+		}
+		.sq9{
+			opacity: 0.9;
+		}
+		.sq10{
+			opacity: 1;
+		}
+
+
+		.tr1{
+			transition:all 0.6s ease;
+		}
+
+		.tr2{
+			transition:all 1.4s ease;
+			transition-delay:0.3s;
+		}
+
+		.tr3{
+			transition:all 1.4s ease;
+		}
+
+		.tr4{
+			transition:all 1.4s ease;
+			transition-delay:1s;
+		}
+		.squares-txt{
+			-webkit-transform: translateY(150%);
+		    -ms-transform: translateY(150%);
+		    transform: translateY(150%);
+			
+		}
+		&:before{
+			-webkit-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		        transform: translateY(-50%);
+    		top: 50%;
+		}
+	}
 }
 
+.squares{
+	position: absolute;
+	overflow: hidden;
+	display: block;
+	width: 102%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	//opacity: 0;
+	transition:all 0.3s ease;
+
+}
+.i-square{
+	width: 10px;
+	height: 10px;
+	float: left;
+	background: #fff;
+	//z-index: -1;
+	opacity: 0;
+}
+.squares-txt{
+	position: relative;
+	z-index: 3;
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+
+
+.sq{
+	fill: #fff;
+	transition:all 0.3s ease;
+	opacity: 0;
+}
+
+
+
+@keyframes shine {
+	0%{
+		opacity: 0;
+	}
+	100% {
+		left: 125%;
+	}
+}
 
 @import "components/loader";
 

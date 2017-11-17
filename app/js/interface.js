@@ -226,45 +226,38 @@ $(document).ready(function() {
 
 
 
-	//SQUARES HOVER
-	if ($('.squares').length>0) {
-	    var bArray = [];
-	    // Define a size array, this will be used to vary bubble sizes
-	    var sArray = [4,6,8,10];
+	// //SQUARES HOVER
+	// if ($('.squares').length>0) {
+	//     var interval = 1000,
+ //        widthB = 8,
+ //        heightB = 8,
+ //        container$ = $('.squares');
+	    
+	//     function buildTheField() {
+	//         for(var y = heightB; 0 < y--;) {
+	//             addRow();
+	//         }
+	//         return $('.i-square');
+	//     }
 	 
-	    // Push the header width values to bArray
-	    for (var i = 0; i < $('.squares').width(); i++) {
-	        bArray.push(i);
-	    }
-	     
-	    // Function to select random array element
-	    // Used within the setInterval a few times
-	    function randomValue(arr) {
-	        return arr[Math.floor(Math.random() * arr.length)];
-	    }
-	 
-	    // setInterval function used to create new bubble every 350 milliseconds
-	    setInterval(function(){
-	         
-	        // Get a random size, defined as variable so it can be used for both width and height
-	        var size = randomValue(sArray);
-	        // New bubble appeneded to div with it's size and left position being set inline
-	        // Left value is set through getting a random value from bArray
-	        $('.squares').append('<div class="i-square" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
-	         
-	        // Animate each bubble to the top (bottom 100%) and reduce opacity as it moves
-	        // Callback function used to remove finsihed animations from the page
-	        $('.i-square').animate({
-	            'bottom': '100%',
-	            'opacity' : '-=0.7'
-	        }, 3000, function(){
-	            $(this).remove()
-	        }
-	        );
-	 
-	 
-	    }, 350);
-    }
+	//     function addRow() {
+	//         for(var x = widthB; 0 < x--;) {
+	//             var div$ = $('<div>').addClass('i-square').css({
+	//                 opacity: Math.random()
+	//             });
+	//             container$.append(div$);
+	//         }
+	//     }
+
+	//     var boxes$ = buildTheField();
+	    
+	//     // Triggers the event for all the boxes
+	//     // function forceAnimate() {
+	//     //     boxes$.trigger('box.animate');
+	//     // }
+
+
+ //    }
 
 
 

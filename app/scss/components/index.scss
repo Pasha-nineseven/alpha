@@ -11,13 +11,17 @@
   width: 100%;
   z-index: 3;
   &.active{
-    .index-page__bg{
+    .index-page__bg,
+    .index-page--top__bg{
       transform: scale(1.3);
+      transition:all 25s linear;
     }
   }
   &.inactive{
-    .index-page__bg{
+    .index-page__bg,
+    .index-page--top__bg{
       transform: scale(1.0);
+      transition:all 1s linear;
     }
   }
 }
@@ -40,11 +44,11 @@
     &:before{
       content: "";
       display: block;
-      width: 100%;
-      height: 100%;
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
       position: absolute;
-      left: -2px;
-      top: -2px;
+      left: 40px;
+      top: 40px;
       background: url(../img/svg/pattern.svg) repeat;
       opacity: 0.3;
       z-index: 5;
@@ -133,12 +137,12 @@
   &:before{
     content: "";
     display: block;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
     position: absolute;
-    left: -2px;
-    top: -2px;
-    background: url(../img/svg/pattern.svg) repeat;
+    left: -18px;
+    top: 40px;
+    background: url(../img/svg/pattern.svg) 0 0 repeat;
     opacity: 0.3;
     z-index: 5;
   }
@@ -166,8 +170,17 @@
   height: 100%;
   .index-page__content{
     justify-content: center;
-    &:before{
-      display: none;
+    &:before {
+      content: "";
+      display: block;
+      width: calc(100% - 80px);
+      height: calc(100% - 80px);
+      position: absolute;
+      left: 40px;
+      top: 40px;
+      background: url(../img/svg/pattern.svg) repeat;
+      opacity: 0.3;
+      z-index: 2;
     }
   }
   &:before{
@@ -201,18 +214,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  &:before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: -2px;
-      top: -2px;
-      background: url(../img/svg/pattern.svg) repeat;
-      opacity: 0.3;
-      z-index: 2;
-  }
+  // transition: all 25s linear;
+    will-change: transform;
 }
 
 
@@ -237,7 +240,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition:all 25s linear;
+  
   will-change: transform;
 }
 

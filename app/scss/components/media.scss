@@ -1,4 +1,10 @@
 //MEDIA
+@media screen and (max-width: 1500px){
+	.index-page__half--info .index-page__content {
+	    padding-left: 85px;
+	    padding-right: 85px;
+	}
+}
 @media screen and (max-width: 1400px){
 	.page-header__link,
 	.page-header__link--sub > a{
