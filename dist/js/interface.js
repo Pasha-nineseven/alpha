@@ -2,6 +2,58 @@ $(document).ready(function() {
 	flexibility(document.documentElement);
 	// document.body.classList.remove('no-js');
 
+
+	// init
+var controller = new ScrollMagic.Controller();
+
+// loop 
+$('.reveal_main').each(function() {
+      var loaderInit = new TimelineMax();
+
+      // tween variables
+      if ($(this).hasClass('left')) {
+        var imgSet = 20,
+          imgBlockFrom = -101,
+          imgBlockTo = 101,
+          contTextSet = -30,
+          textBlockStaggerFrom = 101,
+          textBlockStaggerTo = -101;
+      } else {
+        var imgSet = -20,
+          imgBlockFrom = 101,
+          imgBlockTo = -101,
+          contTextSet = 30,
+          textBlockStaggerFrom = -101,
+          textBlockStaggerTo = 101;
+      }
+  
+// build a tween
+  loaderInit
+    .set($(this).find('.reveal_cont-img'), {autoAlpha:1,xPercent:imgSet},0)
+    .from($(this).find('.reveal_block-img'), 0.325,{xPercent:imgBlockFrom, ease:Power1.easeOut})
+    .set($(this).find('.reveal_img'), {autoAlpha:1})
+    .to($(this).find('.reveal_block-img'), 0.225,{xPercent:imgBlockTo, ease:Sine.easeOut})
+    .set($(this).find('.reveal_cont-text'), {autoAlpha:1,xPercent:contTextSet},0.3)
+   
+    // stagger text blocks and text
+    .staggerFromTo($(this).find('.reveal_block'), 0.7, {xPercent:textBlockStaggerFrom, ease:Power1.easeOut}, {xPercent:textBlockStaggerTo, ease:Power1.easeOut},0.25)
+    .add('blocksEnd')
+    .staggerTo($(this).find('.reveal_text'), 0.1, {autoAlpha:1},0.25,'blocksEnd-=0.75')
+  
+//  build a scene
+  var scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook:'onEnter',
+    offset:400
+    
+  })
+  .setTween(loaderInit)
+  .addTo(controller)  
+});
+
+
+
+
 	//LOGO-LINK
 	$('body').on('click','.menu-btn', function(e){
 		e.preventDefault();
