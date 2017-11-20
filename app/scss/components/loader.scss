@@ -45,6 +45,7 @@
 #loader-wrapper .loader-section {
     position: fixed;
     top: 0;
+    padding-top: 70px;
     width: 100%;
     height: 100%;
     background: #d31f34;
@@ -62,7 +63,7 @@
 /* Loaded */
 .loaded #loader-wrapper .loader-section {
     width: 192px;
-    height: 154px;
+    height: 335px;
 }
 
     
@@ -81,6 +82,13 @@
     .top-logo__img {
         bottom: auto;
         top: 50%;
+
+        background: url(../img/content/top-logo-index.png) no-repeat;
+        margin-left: -80px;
+        width: 160px;
+        height: 83px;
+
+        //margin-top: 70px;
         //margin-top: 20px;
     }
 }

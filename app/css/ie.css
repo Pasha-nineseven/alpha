@@ -1,0 +1,12 @@
+.reveal-eff:after,
+.index-page.active .reveal-eff::after{
+	display: none;
+}
+.index-page.active .index-page__bg,
+.index-page.active .index-page--top__bg {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    -webkit-transition: none;
+    transition: none;
+}
