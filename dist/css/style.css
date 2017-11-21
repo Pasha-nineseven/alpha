@@ -924,6 +924,8 @@ a[href^="https://maps.google.com/maps"] {
   display: inline-block;
   width: 106px;
   height: 55px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   background: url(../img/content/top-logo.png) no-repeat;
   position: absolute;
   bottom: 20px;
@@ -1120,7 +1122,7 @@ a[href^="https://maps.google.com/maps"] {
   left: 0;
   top: 0;
   padding: 25px 40px;
-  z-index: 5;
+  z-index: 9;
   max-height: 100vh;
   overflow-y: auto;
   display: none; }
@@ -1128,6 +1130,11 @@ a[href^="https://maps.google.com/maps"] {
     color: #000; }
     .top-menu .page-header__phone:hover {
       color: #d31f34; }
+
+.layout--index .top-menu .page-header__phone {
+  color: #000; }
+  .layout--index .top-menu .page-header__phone:hover {
+    color: #d31f34; }
 
 .top-menu-wrap {
   clear: both;
@@ -1220,7 +1227,7 @@ a[href^="https://maps.google.com/maps"] {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 3;
+  z-index: 7;
   background: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
@@ -1478,6 +1485,30 @@ a[href^="https://maps.google.com/maps"] {
 
 .top-search__container {
   position: relative; }
+  .top-search__container:after {
+    height: 2px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(228, 0, 43, 0.35), 0 3px 15px 0 rgba(228, 0, 43, 0.35);
+    box-shadow: 0 1px 3px 0 rgba(228, 0, 43, 0.35), 0 3px 15px 0 rgba(228, 0, 43, 0.35);
+    background: #e4002b;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform .35s;
+    transition: -webkit-transform .35s;
+    transition: transform .35s;
+    transition: transform .35s, -webkit-transform .35s;
+    transition: transform .35s,-webkit-transform .35s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: '';
+    z-index: 15; }
+
+.top-search__container--focus:after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1); }
 
 .top-search__submit {
   position: absolute;
@@ -1618,19 +1649,19 @@ a[href^="https://maps.google.com/maps"] {
     display: none; }
   .layout--index .top-logo {
     height: 335px;
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear; }
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
     .layout--index .top-logo.toggled {
       height: 154px;
-      -webkit-transition: all 0.5s linear;
-      transition: all 0.5s linear; }
+      -webkit-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
       .layout--index .top-logo.toggled .top-logo__img {
         width: 106px;
         height: 55px;
         bottom: 20px; }
   .layout--index .page-header {
     width: 100%;
-    z-index: 5;
+    z-index: 7;
     padding: 0 40px;
     position: fixed; }
   .layout--index .page-header__phone,
@@ -1680,8 +1711,8 @@ a[href^="https://maps.google.com/maps"] {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     margin-left: 0;
-    -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear; }
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
 
 .layout--contacts .breadcrumbs,
 .layout--contacts .page-title {
@@ -3077,9 +3108,7 @@ a[href^="https://maps.google.com/maps"] {
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: 0.5s linear;
-  transition: 0.5s linear; }
+          transform: translateY(-50%); }
 
 .loaded .menu-btn {
   opacity: 1;
@@ -3089,7 +3118,9 @@ a[href^="https://maps.google.com/maps"] {
   top: 0;
   -webkit-transform: initial;
       -ms-transform: initial;
-          transform: initial; }
+          transform: initial;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear; }
 
 #loader-wrapper {
   position: fixed;
@@ -3100,7 +3131,7 @@ a[href^="https://maps.google.com/maps"] {
   z-index: 8;
   text-align: center; }
 
-#loader-wrapper .loader-section {
+.loader-section {
   position: fixed;
   top: 0;
   padding-top: 70px;
@@ -3112,11 +3143,12 @@ a[href^="https://maps.google.com/maps"] {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   display: inline-block;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  will-change: transform; }
 
 /* Loaded */
-.loaded #loader-wrapper .loader-section {
+.loaded .loader-section {
   width: 192px;
   height: 335px; }
 
@@ -3129,7 +3161,8 @@ a[href^="https://maps.google.com/maps"] {
   background: url(../img/content/top-logo-index.png) no-repeat;
   margin-left: -80px;
   width: 160px;
-  height: 83px; }
+  height: 83px;
+  margin-top: -21px; }
 
 /* JavaScript Turned Off */
 .index-pages {
@@ -3143,13 +3176,15 @@ a[href^="https://maps.google.com/maps"] {
   top: 0;
   width: 100%;
   z-index: 3; }
-  .index-page.active .index-page__bg {
+  .index-page.active .index-page__bg,
+  .index-page.active .index-page--top__bg {
     -webkit-transform: scale(1.3);
         -ms-transform: scale(1.3);
             transform: scale(1.3);
     -webkit-transition: all 25s linear;
     transition: all 25s linear; }
-  .index-page.inactive .index-page__bg {
+  .index-page.inactive .index-page__bg,
+  .index-page.inactive .index-page--top__bg {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
@@ -3178,7 +3213,7 @@ a[href^="https://maps.google.com/maps"] {
     height: -webkit-calc(100% - 40px);
     height: calc(100% - 40px);
     position: absolute;
-    left: 70px;
+    left: 80px;
     top: 70px;
     background: url(../img/svg/pattern.svg) repeat;
     opacity: 0.3;
@@ -3238,12 +3273,12 @@ a[href^="https://maps.google.com/maps"] {
   .index-page__half--img .index-page__content:after {
     content: "";
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
     background: rgba(0, 0, 0, 0.6);
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -5%;
+    top: -5%;
     z-index: 1; }
 
 .index-page__half--info .index-page__content {
@@ -3289,7 +3324,7 @@ a[href^="https://maps.google.com/maps"] {
       height: -webkit-calc(100% - 80px);
       height: calc(100% - 80px);
       position: absolute;
-      left: 70px;
+      left: 80px;
       top: 70px;
       background: url(../img/svg/pattern.svg) repeat;
       opacity: 0.3;
@@ -3320,7 +3355,13 @@ a[href^="https://maps.google.com/maps"] {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  -webkit-transition: -webkit-transform 25s linear;
+  transition: -webkit-transform 25s linear;
+  transition: transform 25s linear;
+  transition: transform 25s linear, -webkit-transform 25s linear;
+  -webkit-animation: top_scale 25s linear;
+          animation: top_scale 25s linear; }
 
 .index-page__title {
   text-align: center; }
@@ -3488,7 +3529,9 @@ a[href^="https://maps.google.com/maps"] {
   .index-transport__item:hover .index-transport__title {
     padding-left: 5px; }
   .index-transport__item:hover .index-transport__num {
-    top: -50px;
+    -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+            transform: translateY(-30px);
     color: #fff; }
     .index-transport__item:hover .index-transport__num:before {
       background: #d31f34; }
@@ -3582,7 +3625,9 @@ a[href^="https://maps.google.com/maps"] {
   .index-transportations__item:hover .index-transportations__title {
     padding-left: 5px; }
   .index-transportations__item:hover .index-transportations__num {
-    top: -50px;
+    -webkit-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+            transform: translateY(-30px);
     color: #fff; }
     .index-transportations__item:hover .index-transportations__num:before {
       background: #d31f34; }
@@ -3860,6 +3905,22 @@ a[href^="https://maps.google.com/maps"] {
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     opacity: 0.75; } }
+
+@-webkit-keyframes top_scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3); } }
+
+@keyframes top_scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3); } }
 
 .page-footer {
   background: #fff;
@@ -4180,7 +4241,9 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
     width: 100%;
     padding-right: 0; }
   .img-sign-default {
-    margin-left: 30px; } }
+    margin-left: 30px; }
+  .layout--index {
+    padding: 0; } }
 
 @media screen and (max-width: 950px) {
   .page-footer__link:after {
@@ -4283,7 +4346,8 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
   .page-footer__nav {
     display: none; }
   .page-footer__toggle {
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 2px; }
   .page-footer__in {
     text-align: center; }
   .page-footer .container-fluid {
@@ -4396,7 +4460,32 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
     padding-bottom: 40px; }
   .layout--service .page-header:before,
   .layout--service .page-header:after {
-    top: 60px; } }
+    top: 60px; }
+  .layout--index .top-logo {
+    height: 60px; }
+  .layout--index {
+    padding: 0; }
+  .layout--index .page-header {
+    padding: 0 20px; }
+  .layout--index .wrapper:before {
+    left: 20px; }
+  .layout--index .wrapper:after {
+    right: 20px; }
+  .layout--index .page-footer__in {
+    padding: 5px 0; }
+  .page-footer__in:before, .page-footer__in:after {
+    height: 24px;
+    top: 0px; }
+  .layout--index .wrapper:before,
+  .layout--index .wrapper:after {
+    top: 55px; }
+  .index-page--top__bg {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-animation: none;
+            animation: none; }
+  .top-menu-wrap {
+    padding-bottom: 70px; } }
 
 @media screen and (max-width: 650px) {
   .top-menu-links {

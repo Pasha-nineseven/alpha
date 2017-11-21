@@ -271,9 +271,9 @@ $(document).ready(function() {
 		  		$('.top-logo').removeClass('toggled');
 		  	}
 		}
-	  });
+	});
 
-	  $(document).on("keydown", function(e) {
+	$(document).on("keydown", function(e) {
 	    if (scrolling) return;
 	    if (e.which === 38) {
 	      navigateUp();
@@ -326,6 +326,14 @@ $(document).ready(function() {
 		init()
 	}
 	
+
+
+	$('body').on('focus','.top-search__input', function(){
+		$(this).parents('.top-search__container').addClass('top-search__container--focus');
+	});
+	$('body').on('focusout','.top-search__input', function(){
+		$(this).parents('.top-search__container').removeClass('top-search__container--focus');
+	});
 });
 
 
