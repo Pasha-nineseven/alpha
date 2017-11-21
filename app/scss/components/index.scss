@@ -392,7 +392,7 @@
       padding-left: 5px;
     }
     .index-transport__num{
-      top: -50px;
+      transform:translateY(-30px);
       color: #fff;
       &:before{
         background: #d31f34;
@@ -492,7 +492,8 @@
       padding-left: 5px;
     }
     .index-transportations__num{
-      top: -50px;
+      //top: -50px;
+      transform:translateY(-30px);
       color: #fff;
       &:before{
         background: #d31f34;

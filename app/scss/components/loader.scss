@@ -9,7 +9,7 @@
         top: 50%;
         transform: translateY(-50%);
         //will-change: transform;
-        transition:0.5s linear;
+        //transition:0.5s linear;
     }
 
 }
@@ -24,6 +24,7 @@
         top: 0;
         transform: initial;
         //will-change: initial;
+        transition:0.3s linear;
     }
     // .page-header{
     //     // height: auto;
@@ -42,7 +43,7 @@
     text-align: center;
 }
 
-#loader-wrapper .loader-section {
+.loader-section {
     position: fixed;
     top: 0;
     padding-top: 70px;
@@ -56,12 +57,12 @@
     transform: translateX(-50%);
     display: inline-block;
     transition: all 0.3s linear;
-    //will-change: transform;
+    will-change: transform;
 }
 
 
 /* Loaded */
-.loaded #loader-wrapper .loader-section {
+.loaded .loader-section {
     width: 192px;
     height: 335px;
 }
@@ -87,7 +88,7 @@
         margin-left: -80px;
         width: 160px;
         height: 83px;
-
+            margin-top: -21px;
         //margin-top: 70px;
         //margin-top: 20px;
     }

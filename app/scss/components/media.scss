@@ -293,6 +293,9 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	.img-sign-default {
 	    margin-left: 30px;
 	}
+	.layout--index{
+	    padding: 0;
+	}
 }
 
 
@@ -440,6 +443,7 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	}
 	.page-footer__toggle{
 		display: inline-block;
+		margin-top: 2px;
 	}
 	.page-footer__in {
 	    text-align: center;
@@ -592,6 +596,39 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	.layout--service .page-header:before,
 	.layout--service .page-header:after{
 	    top: 60px;
+	}
+	.layout--index .top-logo {
+	    height: 60px;
+	}
+	.layout--index{
+	    padding: 0;
+	}
+	.layout--index .page-header {
+	    padding: 0 20px;
+	}
+	.layout--index .wrapper:before {
+	    left: 20px;
+	}
+	.layout--index .wrapper:after {
+	    right: 20px;
+	}
+	.layout--index .page-footer__in {
+	    padding: 5px 0;
+	}
+	.page-footer__in:before, .page-footer__in:after {
+	    height: 24px;
+	    top: 0px;
+	}
+	.layout--index .wrapper:before,
+	.layout--index .wrapper:after{
+	    top: 55px;
+	}
+	.index-page--top__bg {
+	    transition: none;
+	    animation: none;
+	}
+	.top-menu-wrap {
+	    padding-bottom: 70px;
 	}
 }
 
