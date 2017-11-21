@@ -202,9 +202,10 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	}
 	.top-logo{
 		height: 335px;
-		transition:all 0.3s linear;
+		transition:all 0.5s linear;
 		&.toggled{
 			height: 154px;
+			transition:all 0.5s linear;
 			.top-logo__img{
 				width: 106px;
     			height: 55px;
@@ -271,7 +272,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	    left: 50%;
 	    transform: translateX(-50%);
     	margin-left: 0;
-	    transition:all 0.3s linear;
+	    transition:all 0.5s linear;
 	    // transition-delay:0.3s;
 	}
 }

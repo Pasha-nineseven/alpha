@@ -127,12 +127,14 @@
     z-index: 10;
     margin-left: -96px;
     color: #fff;
+    transition:all 0.5s linear;
 }
 
 .top-logo__img{
 	display: inline-block;
 	width: 106px;
 	height: 55px;
+	transition:all 0.5s linear;
 	background: url(../img/content/top-logo.png) no-repeat;
 	position: absolute;
 	bottom: 20px;

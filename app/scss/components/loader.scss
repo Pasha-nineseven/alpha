@@ -8,8 +8,8 @@
     .top-logo {
         top: 50%;
         transform: translateY(-50%);
-        will-change: transform;
-        transition:0.2s linear;
+        //will-change: transform;
+        transition:0.5s linear;
     }
 
 }
@@ -22,8 +22,8 @@
     }
      .top-logo {
         top: 0;
-            transform: initial;
-            will-change: initial;
+        transform: initial;
+        //will-change: initial;
     }
     // .page-header{
     //     // height: auto;
@@ -55,8 +55,8 @@
     // transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
     transform: translateX(-50%);
     display: inline-block;
-    transition: all 0.2s linear;
-    will-change: transform;
+    transition: all 0.3s linear;
+    //will-change: transform;
 }
 
 
@@ -78,7 +78,7 @@
    
 
 .loader-section{
-    will-change: transform;
+    //will-change: transform;
     .top-logo__img {
         bottom: auto;
         top: 50%;

@@ -40,7 +40,7 @@
   height: 100vh;
   -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
-  will-change: transform;
+  //will-change: transform;
 }
 
 .index-page__half--img {
@@ -54,7 +54,7 @@
       width: calc(100% - 40px);
       height: calc(100% - 40px);
       position: absolute;
-      left: 70px;
+      left: 80px;
       top: 70px;
       background: url(../img/svg/pattern.svg) repeat;
       opacity: 0.3;
@@ -109,26 +109,26 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  &:before{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 100%);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-  }
+  // &:before{
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(255,255,255,0) 100%);
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   z-index: 1;
+  // }
   &:after{
     content: "";
     display: block;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
+    width: 110%;
+    height: 110%;
+    background: rgba(0,0,0,0.6);
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -5%;
+    top: -5%;
     z-index: 1;
   }
 }
@@ -183,7 +183,7 @@
       width: calc(100% - 140px);
       height: calc(100% - 80px);
       position: absolute;
-      left: 70px;
+      left: 80px;
       top: 70px;
       background: url(../img/svg/pattern.svg) repeat;
       opacity: 0.3;
@@ -198,7 +198,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    box-shadow: inset 0px 160px 205px -85px rgba(0, 0, 0, 0.6);
+    //box-shadow: inset 0px 160px 205px -85px rgba(0, 0, 0, 0.6);
   }
   &:after{
     content: "";
@@ -221,7 +221,9 @@
   top: 0;
   width: 100%;
   height: 100%;
-    will-change: transform;
+  transition:transform 25s linear;
+  animation: top_scale 25s linear;
+    //will-change: transform;
 }
 
 
@@ -247,7 +249,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   
-  will-change: transform;
+  //will-change: transform;
 }
 
 .index-services{
@@ -888,5 +890,17 @@
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
             opacity: 0.75;
+  }
+}
+
+
+
+
+@keyframes top_scale {
+  0%{
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
   }
 }
