@@ -10,6 +10,12 @@
   top: 0;
   width: 100%;
   z-index: 3;
+  // &.index-page-1{
+  //   .index-page--top__bg{
+  //     transform: scale(1.3);
+  //     transition:all 25s linear;
+  //   }
+  // }
   &.active{
     .index-page__bg,
     .index-page--top__bg{
@@ -24,6 +30,7 @@
       transition:all 1s linear;
     }
   }
+
 }
 
 .index-page__half {
@@ -214,7 +221,6 @@
   top: 0;
   width: 100%;
   height: 100%;
-  // transition: all 25s linear;
     will-change: transform;
 }
 

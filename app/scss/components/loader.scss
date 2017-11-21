@@ -2,14 +2,14 @@
     .menu-btn{
         opacity: 0;
         visibility: hidden;
-        transition:0.7s 1.7s linear;
+        transition:0.7s 0.7s linear;
     }
 
     .top-logo {
         top: 50%;
         transform: translateY(-50%);
         will-change: transform;
-        transition:0.7s linear;
+        transition:0.2s linear;
     }
 
 }
@@ -55,7 +55,7 @@
     // transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
     transform: translateX(-50%);
     display: inline-block;
-    transition: all 0.7s linear;
+    transition: all 0.2s linear;
     will-change: transform;
 }
 

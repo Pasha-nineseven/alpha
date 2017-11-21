@@ -101,7 +101,7 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	.page-header__nav:after {
 	    width: 15px;
 	    right: -11px;
-	    margin-top: 2px;
+	    //margin-top: 2px;
 	}
 	.layout {
 	    overflow: hidden;
@@ -195,6 +195,11 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	}
 	.cost-form .input-wrap {
 	    font-size: 14px;
+	}
+	.layout--service .page-title,
+	.layout--service .breadcrumbs{
+	    padding-left: 40px;
+	    padding-right: 40px;
 	}
 }
 
@@ -392,7 +397,8 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	    	display: none;
 	    }
 	}
-	.workarea h1 {
+	.workarea h1,
+	.page-title h1 {
 	    font-size: 38px;
 	    line-height: 38px;
 	}
@@ -576,6 +582,16 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	}
 	.stock-img__bg {
 	    height: 410px;
+	}
+	.layout--service .breadcrumbs {
+	    padding-top: 50px;
+	}
+	.layout--service .page-title {
+	    padding-bottom: 40px;
+	}
+	.layout--service .page-header:before,
+	.layout--service .page-header:after{
+	    top: 60px;
 	}
 }
 
