@@ -277,6 +277,23 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	}
 }
 
+.layout--question{
+	.content-part{
+		max-width: 100%;
+		
+	}
+	.breadcrumbs,
+	.page-title{
+		max-width: 700px;
+    	margin: 0 auto;
+	}
+	.page-content{
+		>.container-fluid{
+			max-width: 100%;
+		}
+	}
+}
+
 .layout--contacts{
 	.breadcrumbs,
 	.page-title{
@@ -947,6 +964,10 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	font-size: 16px;
 	font-family: 'gilroyextrabold';
 	padding: 8px 38px;
+	transition:all 0.2s ease;
+	&:active{
+		background: #f74c60;
+	}
 }
 
 .consultation__submit-wrap{
@@ -983,6 +1004,9 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	img{
 		max-width: 100%;
 		height: auto;
+	}
+	.img-sign-default{
+		    margin-left: 38px;
 	}
 }
 
@@ -1681,10 +1705,11 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 .cost-form__search{
 	position: relative;
-	margin-top: 11px;
-	margin-bottom: 60px;
+	margin-top: 15px;
+	margin-bottom: 40px;
     input[type="text"]{
     	    padding-right: 155px;
+    	        padding: 10px 15px;
     }
 }
 
@@ -1697,7 +1722,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     border: 0;
     font-size: 16px;
     font-family: 'gilroyextrabold';
-    padding: 17px 30px;
+    padding: 10px 47px;
     background: #d31f34;
     color: #fff;
     &.squares-wrap{
@@ -1716,7 +1741,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	&:hover{
 		opacity: 1;
 		background: url(../img/svg/close-button.svg) no-repeat;
-	background-size: cover;
+		background-size: cover;
 	}
 }
 
@@ -1724,20 +1749,6 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 .cost__id{
 	max-height: 355px;
 	overflow: hidden;
-	// position: relative;
-	// &:after{
-	// 	content: "";
-	// 	display: block;
-	// 	width: 100%;
-	// 	height: 130px;
-	// 	position: absolute;
-	// 	bottom: 0;
-	// 	left: 0;
-	// 	box-shadow: inset 0px -75px 125px 0px rgba(255, 255, 255, 0.95);
-	// }
-	// table{
-	// 	table-layout: auto;
-	// }
 	td{
 		&:last-child{
 			text-align: right;
@@ -1982,7 +1993,107 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 
 
+.questions{
+	margin: 0 -40px;
+	padding: 0 40px;
+	font-size: 18px;
+	padding-top: 24px;
+}
 
+
+.questions__item{
+	background: #fff;
+	margin: 0 -40px;
+	    padding: 0 40px;
+	position: relative;
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 1px;
+		height: 100%;
+		top: 0;
+		left: 39px;
+		background: #e8e8e8;
+		position: absolute;
+	}
+	&:after{
+		content: "";
+		display: inline-block;
+		width: 1px;
+		height: 100%;
+		top: 0;
+		right: 39px;
+		background: #e8e8e8;
+		position: absolute;
+	}
+	&.active{
+		background: #f8f8f8;
+		.question__answer{
+			&:after{
+				-webkit-transform: scaleX(1);
+				-ms-transform: scaleX(1);
+				transform: scaleX(1);
+			}
+		}
+	}
+}
+.questions__link{
+    max-width: 860px;
+    margin: 0 auto;
+    display: block;
+    padding: 20px 80px;
+    color: #000;
+    overflow: hidden;
+    line-height: 1.4;
+    transition:all 0.1s ease;
+    border-top: 1px solid #f8f8f8;
+    &:hover{
+    	background: #f8f8f8;
+    }
+}
+.questions__number{
+	float: left;
+	width: 40px;
+	color: #d31f34;
+	font-family: 'gilroyextrabold';
+}
+.questions__q{
+	    margin-left: 40px;
+    overflow: hidden;
+    display: block;
+}
+
+.question__answer{
+	max-width: 920px;
+	    margin: 16px auto 0;
+	padding: 30px 0;
+	display: none;
+	position: relative;
+	font-size: 16px;
+	&:after{
+		height: 2px;
+		-webkit-box-shadow: 0 1px 3px 0 rgba(228, 0, 43, 0.35), 0 3px 15px 0 rgba(228, 0, 43, 0.35);
+		box-shadow: 0 1px 3px 0 rgba(228, 0, 43, 0.35), 0 3px 15px 0 rgba(228, 0, 43, 0.35);
+		background: #e4002b;
+		-webkit-transform: scaleX(0);
+		-ms-transform: scaleX(0);
+		transform: scaleX(0);
+		-webkit-transition: -webkit-transform .35s;
+		transition: -webkit-transform .35s;
+		transition: transform .35s;
+		transition: transform .35s, -webkit-transform .35s;
+		transition: transform .35s,-webkit-transform .35s;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		content: '';
+		z-index: 5;
+	}
+}
+
+
+@import "components/rects";
 
 @import "components/loader";
 

@@ -334,6 +334,14 @@ $(document).ready(function() {
 	$('body').on('focusout','.top-search__input', function(){
 		$(this).parents('.top-search__container').removeClass('top-search__container--focus');
 	});
+
+
+
+	$('body').on('click','.questions__link', function(e){
+		e.preventDefault();
+		$(this).parents('.questions__item').toggleClass('active');
+		$(this).next('.question__answer').slideToggle(200);
+	});
 });
 
 
@@ -702,5 +710,6 @@ $('body').append(
 		<li><a href="cost-result.html">Стоимость(рез)</a></li> \
 		<li><a href="track.html">Отслеживание</a></li> \
 		<li><a href="index.html">Главная</a></li> \
+		<li><a href="question.html">Вопрос-ответ</a></li> \
 	</ol> \
 </div>');
