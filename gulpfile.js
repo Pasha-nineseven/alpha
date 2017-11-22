@@ -36,6 +36,7 @@ gulp.task('scripts', function(){
         'app/libs/range-slider/jquery-ui-slider-pips.js',
         'app/libs/ui-touch/jquery.ui.touch-punch.min.js',
         'app/libs/formstyler/jquery.formstyler.min.js',
+        'app/libs/r-tabs/jquery.responsivetabs.js',
 
         // 'app/libs/gsap/TweenMax.min.js',
         // 'app/libs/gsap/ScrollMagic.min.js',

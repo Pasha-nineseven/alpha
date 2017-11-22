@@ -397,12 +397,12 @@ function init(){
 
     var markers = [
 	    {
-	        "lat": '53.9077113',
-	        "lng": '27.482882',
+	        "lat": '53.9277113',
+	        "lng": '27.402882',
 	    },
 	    {
-	        "lat": '38.82259098',
-	        "lng": '-101.07421875',
+	        "lat": '53.9077113',
+	        "lng": '27.482882',
 	    },
     ];
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -711,5 +711,6 @@ $('body').append(
 		<li><a href="track.html">Отслеживание</a></li> \
 		<li><a href="index.html">Главная</a></li> \
 		<li><a href="question.html">Вопрос-ответ</a></li> \
+		<li><a href="contacts.html">Контакты</a></li> \
 	</ol> \
 </div>');

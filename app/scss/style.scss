@@ -1794,7 +1794,11 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 
 .contacts{
-	    margin: -74px -40px 0;
+	margin: -74px -40px 0;
+	position: relative;
+	>.container-fluid{
+		position: static;
+	}
 }
 
 
@@ -1810,19 +1814,20 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 .map-wrap{
 	height: 775px;
 	width: 100%;
-	position: relative;
+	//position: relative;
 }
 
 #map{
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 100%;
+	width: 50%;
 	height: 100%;
 }
 
 .contacts__item--info{
 	padding-top: 205px;
+	padding-left: 100px;
 }
 
 

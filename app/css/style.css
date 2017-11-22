@@ -2960,7 +2960,10 @@ a[href^="https://maps.google.com/maps"] {
       background: #00cc47; }
 
 .contacts {
-  margin: -74px -40px 0; }
+  margin: -74px -40px 0;
+  position: relative; }
+  .contacts > .container-fluid {
+    position: static; }
 
 .contacts__item {
   width: 50%;
@@ -2968,18 +2971,18 @@ a[href^="https://maps.google.com/maps"] {
 
 .map-wrap {
   height: 775px;
-  width: 100%;
-  position: relative; }
+  width: 100%; }
 
 #map {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 50%;
   height: 100%; }
 
 .contacts__item--info {
-  padding-top: 205px; }
+  padding-top: 205px;
+  padding-left: 100px; }
 
 .squares-wrap {
   position: relative;
