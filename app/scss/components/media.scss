@@ -80,6 +80,9 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	.index-page__half--img .index-page__content {
 	    padding: 0 60px;
 	}
+	.contacts{
+		margin-right: 0;
+	}
 }
 @media screen and (max-width: 1400px){
 	.page-header__link,
@@ -162,6 +165,9 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	}
 	.index-services__item {
 	    padding-right: 15px;
+	}
+	.contacts__item--info {
+	    padding-left: 50px;
 	}
 }
 
@@ -649,7 +655,45 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	    padding: 20px;
 	    margin: 0;
 	}
+	.contacts__item {
+    	width: 100%;
+	    float: none;
+	}
+	.contacts__item--info {
+		padding-top: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.map-wrap {
+	    height: 400px;
+	    position: relative;
+	}
+	#map {
+	    width: 100%;
+	}
+	.contacts {
+	    margin: -30px 0 0 0;
+	}
+	.contacts__item--map{
+		margin-bottom: 25px;
+	}
+	.r-tabs{
+		    margin-bottom: 20px;
+	}
+	.r-tabs .r-tabs-nav {
+        display: none;
+    }
 
+    .r-tabs .r-tabs-accordion-title {
+        display: block;
+          font-family: 'gilroyextrabold';	
+    }
+    .r-tabs .r-tabs-panel {
+	    padding: 15px 0 15px;
+	}
+	.contacts-place {
+	    margin-left: 20px;
+	}
 }
 
 @media screen and (max-width: 650px){

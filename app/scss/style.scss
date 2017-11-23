@@ -1827,7 +1827,10 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 .contacts__item--info{
 	padding-top: 205px;
-	padding-left: 100px;
+	padding-left: 122px;
+	h1{
+		margin-bottom: 7px;
+	}
 }
 
 
@@ -2097,6 +2100,120 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	}
 }
 
+
+.r-tabs .r-tabs-nav {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #d31f34;
+}
+
+.r-tabs .r-tabs-tab {
+    display: inline-block;
+    margin-right: -4px;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    &:before{
+    	display: none;
+    }
+    a{
+    	display: block;
+    	padding: 15px 20px;
+	    margin-bottom: -1px;
+	    border-bottom: 2px solid transparent;
+	    font-family: 'gilroyextrabold';	
+	    color: #000;
+	    background: transparent!important;
+    }
+    &.r-tabs-state-active{
+    	a{
+    		border-bottom: 2px solid #d31f34;
+			color: #d31f34;
+    	}
+    }
+}
+
+.r-tabs .r-tabs-panel {
+    padding: 33px 0 15px;
+    display: none;
+}
+
+.r-tabs .r-tabs-accordion-title {
+    display: none;
+}
+
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+    display: block;
+}
+
+
+.contacts-item{
+	margin-bottom: 19px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+.contacts-place{
+	font-family: 'gilroyextrabold';	
+	position: relative;
+	margin-bottom: 20px;
+	&:before{
+		content: "";
+	    display: inline-block;
+	    width: 15px;
+	    height: 18px;
+	    position: absolute;
+	    left: -20px;
+	    top: 3px;
+	    background: url(../img/svg/marker.svg) no-repeat;
+	    background-size: contain;
+	}
+}
+
+.contacts-info{
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.contacts-phone{
+	display: inline-block;
+	margin-right: 20px;
+	padding-left: 30px;
+	position: relative;
+	margin-bottom: 20px;
+	&:before{
+		content: "";
+		display: inline-block;
+		width: 15px;
+		height: 17px;
+		background: url(../img/svg/c-phone.svg) no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -9px;
+	}
+}
+
+
+.contacts-mail{
+	display: inline-block;
+	padding-left: 30px;
+	position: relative;
+	margin-bottom: 20px;
+	&:before{
+		content: "";
+	    display: inline-block;
+	    width: 15px;
+	    height: 13px;
+	    background: url(../img/svg/c-mail.svg) no-repeat;
+	    background-size: contain;
+	    position: absolute;
+	    left: 0;
+	    top: 50%;
+	    margin-top: -6px;
+	}
+}
 
 @import "components/rects";
 
