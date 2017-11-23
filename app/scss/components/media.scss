@@ -694,6 +694,30 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	.contacts-place {
 	    margin-left: 20px;
 	}
+	.layout--404 .page-content:before {
+	    content: "";
+	    width: -webkit-calc(100% - 140px);
+	    width: calc(100% - 20px);
+	    height: -webkit-calc(100% - 80px);
+	    height: calc(100% - 20px);
+	    left: 20px;
+	    top: 20px;
+	}
+	.layout--404 .index-page__line.index-page__line--3 {
+	    left: 121px;
+	    bottom: 67px;
+	}
+	.layout--404 .index-page__line.index-page__line--2 {
+	    right: 6px;
+	    bottom: 362px;
+	}
+	.index-page__line.index-page__line--1 {
+	    left: 72px;
+	    top: 72px;
+	}
+	.layout--404 {
+	    background-size: contain;
+	}
 }
 
 @media screen and (max-width: 650px){

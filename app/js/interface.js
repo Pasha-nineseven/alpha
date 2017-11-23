@@ -1031,5 +1031,6 @@ $('body').append(
 		<li><a href="index.html">Главная</a></li> \
 		<li><a href="question.html">Вопрос-ответ</a></li> \
 		<li><a href="contacts.html">Контакты</a></li> \
+		<li><a href="page404.html">404</a></li> \
 	</ol> \
 </div>');

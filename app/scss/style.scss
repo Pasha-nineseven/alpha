@@ -317,6 +317,86 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	}
 }
 
+.layout--404{
+	background: #1b0023 url(../img/content/404bg.png) center no-repeat;
+	background-size: 900px 350px;
+	.page-footer,
+	.page-header__nav,
+	.top-search,
+	.page-header__phone,
+	.breadcrumbs,
+	.page-title,
+	.menu-btn{
+		display: none;
+	}
+	.top-logo-wrap{
+		border-bottom: 0;
+	}
+	.page-content{
+		border: 0;
+		padding-top: 0;
+	    vertical-align: middle;
+	    position: relative;
+	    >.container-fluid{
+	    	position: static;
+	    }
+	    &:before{
+			content: "";
+			display: block;
+			width: -webkit-calc(100% - 140px);
+			width: calc(100% - 140px);
+			height: -webkit-calc(100% - 80px);
+			height: calc(100% - 80px);
+			position: absolute;
+			left: 80px;
+			top: 70px;
+			background: url(../img/svg/pattern.svg) repeat;
+			opacity: 0.3;
+			z-index: 0;
+	    }
+	}
+	.top-logo__img{
+		width: 160px;
+		height: 83px;
+		background: url(../img/content/top-logo-index.png) no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: 45px;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		margin-left: 0;
+	}
+	.rect--2 {
+    	left: 83px;
+	    background: rgba(0, 0, 0, 0.2);
+	}
+	.rect--3 {
+	    right: 157px;
+	    bottom: 203px;
+	}
+	.rect--4 {
+	    right: 308px;
+	}
+	.rect--5 {
+    	right: 107px;
+	    background: rgba(0, 0, 0, 0.2);
+	}
+	.rect--6 {
+	    right: 557px;
+	    bottom: 303px;
+	    background: rgba(0, 0, 0, 0.2);
+	}
+	.index-page__line.index-page__line--2 {
+	    right: 199px;
+	    bottom: 343px;
+	}
+	.index-page__line.index-page__line--3{
+        left: 132px;
+    	bottom: 97px;
+    }
+}
 
 .wrapper{
 	display: table-row;
@@ -2212,6 +2292,26 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	    left: 0;
 	    top: 50%;
 	    margin-top: -6px;
+	}
+}
+
+
+.page404{
+	text-align: center;
+	color: #fff;
+	position: relative;
+	z-index: 5;
+}
+
+.return404{
+	display: inline-block;
+	font-family: 'gilroyextrabold';	
+	color: #fff;
+	background: #d31f34;
+	    padding: 17px 25px;
+	transition:background 0.3s ease;
+	&:hover{
+		background: #b92032;
 	}
 }
 
