@@ -717,7 +717,19 @@ noindex:-o-prefocus, .index-page.active .index-page.active .index-page--top__bg 
 	}
 	.layout--404 {
 	    background-size: contain;
+	    .top-logo {
+		    width: 136px;
+		    height: 80px;
+		    margin-left: -68px;
+		}
+		.top-logo__img {
+		    display: inline-block;
+		    width: 106px;
+		    height: 55px;
+		    bottom: 13px;
+		}
 	}
+
 }
 
 @media screen and (max-width: 650px){

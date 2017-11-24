@@ -231,6 +231,8 @@ $(document).ready(function() {
 	var scrolling = false;
 	var pgPrefix = ".index-page-";
 
+	$('.index-pager__count').text(numOfPages);
+
 	function pagination() {
 	    scrolling = true;
 
@@ -238,20 +240,38 @@ $(document).ready(function() {
 	    $(pgPrefix + (curPage - 1)).addClass("inactive");
 	    $(pgPrefix + (curPage + 1)).removeClass("active");
 
+
+
 	    setTimeout(function() {
 	      scrolling = false;
 	    }, animTime);
 	};
 
 	function navigateUp() {
-	    if (curPage === 1) return;
+	    if (curPage === 1){
+	    	//$('.index-pager').fadeOut();
+	    	return;
+	    } 
 	    curPage--;
+	   
+	    $('.index-pager__current').find('span').text(curPage);
+	    if (curPage === 1){
+	    	$('.index-pager').fadeOut(300);
+	    	$('.top-logo').removeClass('toggled');
+	    } 
+	    
 	    pagination();
 	};
 
 	function navigateDown() {
 	    if (curPage === numOfPages) return;
 	    curPage++;
+	    //console.log(curPage);
+	    $('.index-pager__current').find('span').text(curPage);
+	    if (curPage > 1){
+	    	$('.index-pager').fadeIn(500);
+	    	$('.top-logo').addClass('toggled');
+	    } 
 	    pagination();
 	};
 
@@ -262,15 +282,6 @@ $(document).ready(function() {
 	    } else { 
 	      navigateDown();
 	    }
-
-	    if ($('.layout--index').length>0) {
-		  	if ( $('.index-page--top').hasClass( "inactive" )) { 
-		    	$('.top-logo').addClass('toggled');
-		  	}
-		  	else{
-		  		$('.top-logo').removeClass('toggled');
-		  	}
-		}
 	});
 
 	$(document).on("keydown", function(e) {
@@ -280,6 +291,17 @@ $(document).ready(function() {
 	    } else if (e.which === 40) {
 	      navigateDown();
 	    }
+	});
+
+	//next
+	$('body').on('click','.index-pager__right', function(e){
+		e.preventDefault();
+		navigateDown();
+	});
+	//prev
+	$('body').on('click','.index-pager__left', function(e){
+		e.preventDefault();
+		navigateUp();
 	});
 
 
@@ -1031,5 +1053,6 @@ $('body').append(
 		<li><a href="index.html">Главная</a></li> \
 		<li><a href="question.html">Вопрос-ответ</a></li> \
 		<li><a href="contacts.html">Контакты</a></li> \
+		<li><a href="page404.html">404</a></li> \
 	</ol> \
 </div>');

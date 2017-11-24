@@ -396,6 +396,12 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
         left: 132px;
     	bottom: 97px;
     }
+    .index-page__line{
+	    &.index-page__line--3{
+	        left: 100px;
+	        bottom: 100px;
+	    }
+	}
 }
 
 .wrapper{
