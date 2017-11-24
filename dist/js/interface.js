@@ -391,13 +391,36 @@ $(document).ready(function() {
 		}
 	}
 	
+
+	if ($('.layout--stock').length>0) {
+		var imgMarg = $('.stock-img');
+		var fHeight = $('.stock-img-wrap').outerHeight();
+		imgMarg.css({'top':fHeight});
+	}
+
+
+
+	$('.gallery-item').magnificPopup({
+		type: 'image',
+		removalDelay: 500, //delay removal by X to allow out-animation
+		callbacks: {
+		    beforeOpen: function() {
+		       	this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+       			this.st.mainClass = this.st.el.attr('data-effect');
+		    }
+		},
+	});
 });
 
 
 
 
 $(window).resize(function () {
-	//position_indicator(menu.find(".lang-item.active")); 
+	if ($('.layout--stock').length>0) {
+		var imgMarg = $('.stock-img');
+		var fHeight = $('.stock-img-wrap').outerHeight();
+		imgMarg.css({'top':fHeight});
+	}
 });
 
 

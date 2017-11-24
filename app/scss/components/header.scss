@@ -796,8 +796,6 @@
 	position: relative;
 	&:after {
 	    height: 2px;
-	    -webkit-box-shadow: 0 1px 3px 0 rgba(228,0,43,.35), 0 3px 15px 0 rgba(228,0,43,.35);
-	    box-shadow: 0 1px 3px 0 rgba(228,0,43,.35), 0 3px 15px 0 rgba(228,0,43,.35);
 	    background: #e4002b;
 	    -webkit-transform: scaleX(0);
 	    -ms-transform: scaleX(0);
