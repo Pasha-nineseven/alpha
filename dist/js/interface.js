@@ -276,21 +276,25 @@ $(document).ready(function() {
 	};
 
 	$(document).on("mousewheel DOMMouseScroll", function(e) {
-	    if (scrolling) return;
-	    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-	      navigateUp();
-	    } else { 
-	      navigateDown();
-	    }
+		if ( $(window).width() > 768){
+		    if (scrolling) return;
+		    if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+		      navigateUp();
+		    } else { 
+		      navigateDown();
+		    }
+		}
 	});
 
 	$(document).on("keydown", function(e) {
-	    if (scrolling) return;
-	    if (e.which === 38) {
-	      navigateUp();
-	    } else if (e.which === 40) {
-	      navigateDown();
-	    }
+		if ( $(window).width() > 768){
+		    if (scrolling) return;
+		    if (e.which === 38) {
+		      navigateUp();
+		    } else if (e.which === 40) {
+		      navigateDown();
+		    }
+		}
 	});
 
 	//next
