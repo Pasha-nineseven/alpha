@@ -217,7 +217,7 @@
 .page-header__submenu{
 	position: absolute;
 	z-index: 5;
-	right: 0;
+	//right: 0;
 	// left: 0;
 	padding-top: 20px;
 
@@ -228,17 +228,7 @@
 	transition: all 0.3s ease-in-out;
 	z-index: -1;
 	visibility: hidden;
-	// display: none;
-	// &.active{
-	// 	opacity: 1;
-	// 	-webkit-transform: translateY(0);
-	// 	-ms-transform: translateY(0);
-	// 	transform: translateY(0);
-	// 	z-index: 5;
-	// 	visibility: visible;
-	// 	transition: all 0.3s ease-in-out;
-	// 	// display: block;
-	// }
+	min-width: 100%;
 	.tabs{
 		margin: 0;
 		padding: 0;
@@ -780,7 +770,7 @@
 	width: 100%;
 	font-size: 30px;
 	border: 0;
-	color: #aaaaaa;
+	color: #000;
 	border-bottom: 2px solid #ececec;
 	transition:all 0.3s ease;
 	    padding: 18px 0;

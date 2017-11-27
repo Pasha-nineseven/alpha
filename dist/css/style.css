@@ -1807,9 +1807,6 @@ a[href^="https://maps.google.com/maps"] {
   .layout--404 .index-page__line.index-page__line--3 {
     left: 132px;
     bottom: 97px; }
-  .layout--404 .index-page__line.index-page__line--3 {
-    left: 100px;
-    bottom: 100px; }
 
 .wrapper {
   display: table-row;
@@ -2231,7 +2228,13 @@ a[href^="https://maps.google.com/maps"] {
   border: 0;
   border-bottom: 2px solid #e17581;
   color: #fff;
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .consultation__form input[type="text"]:focus,
+  .consultation__form input[type="email"]:focus,
+  .consultation__form input[type="tel"]:focus {
+    border-bottom: 2px solid #fff; }
 
 .consultation__form textarea {
   background: transparent;
@@ -2241,7 +2244,11 @@ a[href^="https://maps.google.com/maps"] {
   padding: 10px 15px;
   width: 100%;
   resize: none;
-  height: 100px; }
+  height: 100px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .consultation__form textarea:focus {
+    border-bottom: 2px solid #fff; }
 
 .input-wrap__label {
   position: absolute;
@@ -3225,20 +3232,20 @@ a[href^="https://maps.google.com/maps"] {
       -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
       transform: scaleX(1); }
-  .questions__item:first-child .questions__link {
+  .questions__item:first-child .questions__q,
+  .questions__item:first-child .questions__number {
     border-top: 0; }
 
 .questions__link {
   max-width: 860px;
   margin: 0 auto;
   display: block;
-  padding: 20px 80px;
+  padding: 0px 80px 20px 80px;
   color: #000;
   overflow: hidden;
   line-height: 1.4;
   -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-  border-top: 1px solid #f8f8f8; }
+  transition: all 0.1s ease; }
   .questions__link:hover {
     background: #f8f8f8; }
 
@@ -3246,12 +3253,16 @@ a[href^="https://maps.google.com/maps"] {
   float: left;
   width: 40px;
   color: #d31f34;
-  font-family: 'gilroyextrabold'; }
+  font-family: 'gilroyextrabold';
+  padding-top: 20px;
+  border-top: 1px solid #f8f8f8; }
 
 .questions__q {
   margin-left: 40px;
   overflow: hidden;
-  display: block; }
+  display: block;
+  padding-top: 20px;
+  border-top: 1px solid #f8f8f8; }
 
 .question__answer {
   max-width: 920px;

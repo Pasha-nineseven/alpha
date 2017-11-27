@@ -396,12 +396,6 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
         left: 132px;
     	bottom: 97px;
     }
-    .index-page__line{
-	    &.index-page__line--3{
-	        left: 100px;
-	        bottom: 100px;
-	    }
-	}
 }
 
 .wrapper{
@@ -558,6 +552,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 		table-layout: fixed;
 		width: 100%;
 		margin-bottom: 40px;
+		line-height: 1;
 		th{
 			font-size: 16px;
 			font-family: 'gilroyextrabold';
@@ -685,7 +680,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     padding: 44px 0 10px 19px;
     border-left: 3px solid #d31f34;
     position: relative;
-    z-index: 3;
+    //z-index: 3;
     margin-left: 20px;
 }
 
@@ -831,6 +826,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	margin-bottom: 17px;
 	display: block;
 	color: #000;
+	margin-top: -8px;
 	&:hover{
 		background: transparent;
 		color: #d31f34;
@@ -909,7 +905,11 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 		border: 0;
 		border-bottom: 2px solid #e17581;
 		color: #fff;
-		padding: 10px 15px; 
+		padding: 10px 15px;
+		transition:all 0.3s ease;
+		&:focus{
+			border-bottom: 2px solid #fff;
+		}
 	}
 	textarea{
 		background: transparent;
@@ -920,6 +920,10 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 		width: 100%;
 		resize: none;
 		height: 100px;
+		transition:all 0.3s ease;
+		&:focus{
+			border-bottom: 2px solid #fff;
+		}
 	}
 }
 
@@ -1066,6 +1070,7 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     margin-top: 25px;
 	border-top: 1px solid #d31f34;
 	text-align: right;
+	line-height: 1;
 	img{
 		display: inline-block;
 		vertical-align: middle;
@@ -1124,11 +1129,13 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 .stock-img-wrap{
 	padding-left: 0;
 	position: static;
+	   // min-height: 735px;
 	// padding-bottom: 600px;
 }
 
 .stock-info{
 	padding-right: 0;
+	line-height: 1.8;
 }
 
 // .service-list{
@@ -2132,7 +2139,8 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 		}
 	}
 	&:first-child{
-		.questions__link{
+		.questions__q,
+		.questions__number{
 			border-top: 0;
 		}		
 	}
@@ -2141,12 +2149,12 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     max-width: 860px;
     margin: 0 auto;
     display: block;
-    padding: 20px 80px;
+    padding: 0px 80px 20px 80px;
     color: #000;
     overflow: hidden;
     line-height: 1.4;
     transition:all 0.1s ease;
-    border-top: 1px solid #f8f8f8;
+    
     &:hover{
     	background: #f8f8f8;
     }
@@ -2156,11 +2164,15 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	width: 40px;
 	color: #d31f34;
 	font-family: 'gilroyextrabold';
+	padding-top: 20px;
+	border-top: 1px solid #f8f8f8;
 }
 .questions__q{
 	    margin-left: 40px;
     overflow: hidden;
     display: block;
+    padding-top: 20px;
+    border-top: 1px solid #f8f8f8;
 }
 
 .question__answer{
@@ -2373,6 +2385,239 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close{
 	cursor: pointer;
+}
+
+
+.afbf_item_pole.error_pole .afbf_error_text{
+	position: absolute;
+    width: 100%;
+    margin: 3px 0 0 0;
+    padding: 10px 10px 10px 45px;
+    background: #fff;
+    color: #39414d;
+    font-size: 11px;
+    font-family: Verdana,sans-serif;
+    z-index: 3;
+}
+
+.afbf_item_pole.error_pole .afbf_error_text:after{
+    right: auto;
+    left: 10px;
+    top: 9px;
+}
+
+
+.afbf_item_pole.error_pole .afbf_error_text:before{
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent #ffffff transparent;
+	position: absolute;
+	top: -5px;
+	left: 13px;
+}
+
+
+.alx-feedb-error {
+    margin-top: 0;
+    position: absolute;
+    right: 0;
+    top: -45px;
+}
+
+.afbf_error_block .afbf_error_text{
+	color: #fff;
+}
+
+.afbf_success_block {
+    margin-bottom: 0;
+    border: 8px solid #dc4c5d;
+}
+.afbf_success_block._without-popup {
+	height: auto;
+	padding: 45px;
+	margin-top: 40px;
+}
+
+.afbf_success_block._without-popup .afbf_ok_icon{
+	display: none;
+}
+
+.afbf_success_block._without-popup .afbf_mess_ok{
+	display: block;
+	margin-bottom: 20px;
+}
+
+.afbf_success_block._without-popup .afbf_mess_ok .mess {
+    margin-left: 0;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.afbf_send_another_message{
+	text-align: center;
+}
+
+.afbf_send_another_message .consultation__submit{
+	color: #fff;
+}
+
+
+.afbf_send_another_message .consultation__submit:hover{
+	color: #d31f34;
+}
+
+.uptolike-buttons{
+	display: inline-block;
+    vertical-align: middle;
+}
+
+.search-item a{
+	background: transparent!important;
+}
+div.search-preview {
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+font.notetext {
+    color: #000;
+}
+
+.search-result font.errortext{
+	color: #000!important;
+}
+
+
+#panel+.layout--index{
+	margin-top: -39px;
+}
+
+.search-page-wrap{
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.search-page-wrap:after{
+	height: 2px;
+    transform: scaleX(0);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    content: "";
+    z-index: 15;
+    background: rgb(228, 0, 43);
+    transition: transform 0.35s, -webkit-transform 0.35s;
+}
+
+.search-page-wrap--focus:after{
+	transform: scaleX(1);
+}
+
+.search-page-input input[type="text"]{
+	width: 100%;
+    font-size: 30px;
+    border: 0;
+    color: #000;
+    border-bottom: 2px solid #ececec;
+    transition: all 0.3s ease;
+    padding: 18px 0;
+    background: #fff;
+    padding-right: 40px;
+}
+.search-page-submit input[type="submit"]{
+	position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -17px;
+    width: 33px;
+    height: 34px;
+    background: url(../img/svg/search.svg) center no-repeat;
+    background-size: contain;
+    transition: all 0.3s ease;
+    padding: 0;
+    border: 0;
+    text-indent: -9999em;
+    display: inline-block;
+}
+
+
+.search-page-submit input[type="submit"]:hover {
+    background: url(../img/svg/search-h.svg) center no-repeat;
+    background-size: contain;
+}
+
+
+.search-advanced-result{
+	margin-bottom: 20px;
+}
+
+.pagetitle-block{
+	position: relative;
+	h1{
+		    padding-right: 140px;
+	}
+	a{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -10px;
+	}
+}
+
+.afbf_inputtext_bg.file .afbf_input_group .afbf_inputtext {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #e17581;
+    color: #fff;
+    padding: 10px 15px!important;
+    transition: all 0.3s ease;
+}
+
+.afbf_inputtext_bg.file .afbf_input_group {
+    padding-left: 35px;
+}
+
+.afbf_inputtext_bg.file .afbf_input_group .afbf_group_btn {
+    position: absolute;
+    display: inline-block;
+    padding-left: 0;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    font-size: inherit;
+    width: 22px;
+    height: 20px;
+}
+.afbf_inputtext_bg.file .afbf_input_group .afbf_group_btn .afbf_file_button {
+    border-radius: 0;
+    height: 22px;
+    width: 20px;
+    overflow: hidden;
+    line-height: normal;
+    background: url(../img/svg/clip.svg) center no-repeat;
+    background-size: contain;
+    box-shadow: none;
+}
+
+
+.input-wrap--file .afbf_name {
+    margin: 0px 0px 6px 36px;
+}
+
+.return-link{
+	text-align: left;
+	padding-top: 10px;
+}
+
+a.lang-item:hover{
+  color: #d31f34;
 }
 
 @import "components/rects";
