@@ -38,6 +38,7 @@ gulp.task('scripts', function(){
         'app/libs/formstyler/jquery.formstyler.min.js',
         'app/libs/r-tabs/jquery.responsivetabs.js',
         'app/libs/magnific/jquery.magnific-popup.js',
+        'app/libs/touch/jquery.mobile-events.js',
 
         // 'app/libs/gsap/TweenMax.min.js',
         // 'app/libs/gsap/ScrollMagic.min.js',

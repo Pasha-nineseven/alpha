@@ -297,6 +297,14 @@ $(document).ready(function() {
 		}
 	});
 
+
+	$(document).on("swipedown", function(e) {
+			navigateDown();
+	});
+	$(document).on('swipeup', function(e) {
+		 	navigateUp();
+	});
+
 	//next
 	$('body').on('click','.index-pager__right', function(e){
 		e.preventDefault();

@@ -2800,7 +2800,7 @@ a[href^="https://maps.google.com/maps"] {
 .cost-form__item--full {
   margin-right: 2px; }
   .cost-form__item--full .input-wrap {
-    width: 33.33%;
+    width: 25%;
     padding-right: 0;
     border-right: 1px solid #cbcccf; }
     .cost-form__item--full .input-wrap:last-child {
@@ -3807,7 +3807,6 @@ a.lang-item:hover {
     left: 80px;
     top: 70px;
     background: url(../img/svg/pattern.svg) repeat;
-    opacity: 0.3;
     z-index: 5; }
 
 .index-page__half--info {
@@ -3891,7 +3890,6 @@ a.lang-item:hover {
     left: -18px;
     top: 70px;
     background: url(../img/svg/pattern.svg) 0 0 repeat;
-    opacity: 0.3;
     z-index: 5; }
 
 .index-page.inactive .index-page__content {
@@ -3918,7 +3916,6 @@ a.lang-item:hover {
       left: 80px;
       top: 70px;
       background: url(../img/svg/pattern.svg) repeat;
-      opacity: 0.3;
       z-index: 2; }
   .index-page--top:before {
     content: "";
